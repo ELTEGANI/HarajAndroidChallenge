@@ -1,8 +1,7 @@
 package com.example.harajtask.repository
 
 import android.content.Context
-import android.util.Log
-import com.example.harajtask.utils.CarsProperties
+import com.example.harajtask.utils.ItemsProperties
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -12,13 +11,13 @@ import javax.inject.Inject
 
 
 
-class Repository @Inject constructor(@ApplicationContext var context: Context) {
-    fun retrieveAllCarsProperties():List<CarsProperties>? {
+class ItemsRepository @Inject constructor(@ApplicationContext var context: Context) {
+    fun retrieveAllCarsProperties():List<ItemsProperties>? {
         val moshi = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())
             .build()
-        val listType = Types.newParameterizedType(List::class.java,CarsProperties::class.java)
-        val adapter: JsonAdapter<List<CarsProperties>> = moshi.adapter(listType)
+        val listType = Types.newParameterizedType(List::class.java,ItemsProperties::class.java)
+        val adapter: JsonAdapter<List<ItemsProperties>> = moshi.adapter(listType)
         val jsonFile = "data.json"
         val carsJson = context.assets.open(jsonFile).bufferedReader().use{
             it.readText()

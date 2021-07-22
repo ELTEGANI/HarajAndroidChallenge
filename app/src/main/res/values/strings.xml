@@ -2,4 +2,6 @@
     <string name="app_name">HarajTask</string>
     <string name="car_description">car_description</string>
     <string name="location_description">location_description</string>
+    <string name="share_details">share_details</string>
+    <string name="item_image">item_image</string>
 </resources>

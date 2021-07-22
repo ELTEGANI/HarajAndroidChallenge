@@ -6,6 +6,20 @@
 
     <fragment
         android:id="@+id/carListFragment"
-        android:name="com.example.harajtask.ui.CarListFragment"
-        android:label="CarListFragment" />
+        android:name="com.example.harajtask.ui.ItemsListFragment"
+        android:label="CarListFragment" >
+        <action
+            android:id="@+id/action_carListFragment_to_carDetailFragment"
+            app:destination="@id/carDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailFragment"
+        android:name="com.example.harajtask.ui.ItemDetailFragment"
+        android:label="CarDetailFragment">
+        <argument
+            android:name="selectedItem"
+            app:argType="com.example.harajtask.utils.ItemsProperties"
+            />
+
+    </fragment>
 </navigation>

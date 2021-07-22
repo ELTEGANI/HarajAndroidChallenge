@@ -1,7 +1,7 @@
 package com.example.harajtask.di
 
 import android.content.Context
-import com.example.harajtask.repository.Repository
+import com.example.harajtask.repository.ItemsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,5 +15,5 @@ import javax.inject.Singleton
 class AppModule {
     @Singleton
     @Provides
-    fun provideRepository(@ApplicationContext  context: Context) = Repository(context)
+    fun provideRepository(@ApplicationContext  context: Context) = ItemsRepository(context)
 }
