@@ -1,5 +1,6 @@
 package com.example.harajtask.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,7 +23,20 @@ class ItemDetailFragment : Fragment() {
         itemDetailFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.item_detail_fragment,container,false)
         itemDetailFragmentBinding.lifecycleOwner = this
         displayItemDetails(ItemDetailFragmentArgs.fromBundle(requireArguments()).selectedItem)
+        shareTitlePost()
         return itemDetailFragmentBinding.root
+    }
+
+    private fun shareTitlePost() {
+        itemDetailFragmentBinding.shareIconImageView.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, itemDetailFragmentBinding.titleTextView.text.toString())
+                type = "text/plain"
+            }
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
     }
 
     private fun displayItemDetails(itemDetail: ItemsProperties) {
