@@ -12,7 +12,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.harajtask.R
 import com.example.harajtask.databinding.ItemDetailFragmentBinding
 import com.example.harajtask.utils.ItemsProperties
-import com.example.harajtask.viewmodel.ItemDetailViewModel
+import com.example.harajtask.utils.convertLongToDate
+import com.example.harajtask.utils.convertLongToTimeStamp
 
 
 class ItemDetailFragment : Fragment() {
@@ -41,7 +42,7 @@ class ItemDetailFragment : Fragment() {
 
     private fun displayItemDetails(itemDetail: ItemsProperties) {
         itemDetailFragmentBinding.titleTextView.text = itemDetail.title
-        itemDetailFragmentBinding.durationTextView.text = itemDetail.date
+        itemDetailFragmentBinding.durationTextView.text = convertLongToTimeStamp(itemDetail.date.toLong())
         itemDetailFragmentBinding.userNameTextView.text = itemDetail.username
         itemDetailFragmentBinding.locationTextView.text = itemDetail.city
         itemDetailFragmentBinding.descriptionTextView.text = itemDetail.body
