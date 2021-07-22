@@ -1,5 +1,6 @@
 package com.example.harajtask.utils
 
+import android.annotation.SuppressLint
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -24,5 +25,17 @@ fun setImageUrl(imageView: ImageView, url: String) {
 fun TextView.setTimeTextView(itemsProperties: ItemsProperties) {
     itemsProperties.let {
         text = convertLongToDate(itemsProperties.date.toLong())?.getTimeAgo()
+    }
+}
+
+@SuppressLint("SetTextI18n")
+@BindingAdapter("title")
+fun TextView.setTitleTextView(itemsProperties: ItemsProperties) {
+    itemsProperties.let {
+        if(itemsProperties.title.length >= 30){
+           text = itemsProperties.title.substring(0,20)+ "..."
+        }else{
+            text = itemsProperties.title
+        }
     }
 }
