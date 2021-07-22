@@ -68,37 +68,41 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginTop="97dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/user_name_description"
             app:layout_constraintBottom_toTopOf="@+id/description_textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_imageView"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_user" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/user_name_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="52dp"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="@color/colorLightBlack"
-            app:layout_constraintEnd_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/item_imageView" />
+            app:layout_constraintBottom_toTopOf="@+id/description_textView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="104dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="97dp"
             android:layout_marginBottom="26dp"
+            android:contentDescription="@string/location_description"
             app:layout_constraintBottom_toTopOf="@+id/description_textView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_imageView"
+            app:layout_constraintVertical_bias="0.52"
             app:srcCompat="@drawable/ic_location" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -106,7 +110,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="48dp"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="@color/colorLightBlack"
             app:layout_constraintBottom_toTopOf="@+id/description_textView"
@@ -119,10 +123,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="82dp"
+            android:maxLines="3"
+            android:scrollbarSize="2dp"
             android:scrollbars="vertical"
-            android:scrollHorizontally="true"
             android:textAppearance="?attr/textAppearanceHeadline5"
             android:textColor="@color/colorLightBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

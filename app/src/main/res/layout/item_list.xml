@@ -66,11 +66,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:singleLine="false"
-                    android:text="@{itemsProperties.title}"
+                    app:title="@{itemsProperties}"
                     android:textColor="@color/colorGreen"
                     android:textSize="14sp"
                     android:textStyle="bold"
+                    android:maxLines="1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

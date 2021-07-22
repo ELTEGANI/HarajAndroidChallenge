@@ -14,6 +14,10 @@ import com.example.harajtask.databinding.ItemDetailFragmentBinding
 import com.example.harajtask.utils.ItemsProperties
 import com.example.harajtask.utils.convertLongToDate
 import com.example.harajtask.utils.convertLongToTimeStamp
+import android.text.method.ScrollingMovementMethod
+
+
+
 
 
 class ItemDetailFragment : Fragment() {
@@ -46,6 +50,7 @@ class ItemDetailFragment : Fragment() {
         itemDetailFragmentBinding.userNameTextView.text = itemDetail.username
         itemDetailFragmentBinding.locationTextView.text = itemDetail.city
         itemDetailFragmentBinding.descriptionTextView.text = itemDetail.body
+        itemDetailFragmentBinding.descriptionTextView.movementMethod = ScrollingMovementMethod()
         Glide.with(itemDetailFragmentBinding.itemImageView.context)
             .load(itemDetail.thumbURL)
             .apply(
