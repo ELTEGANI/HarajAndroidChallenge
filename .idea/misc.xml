@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_broken_image.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/drawable/ic_location.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/drawable/ic_user.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/drawable/loading_animation.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/drawable/loading_img.xml" value="0.21145833333333333" />
@@ -14,7 +16,7 @@
         <entry key="app/src/main/res/layout/car_list_fragment.xml" value="0.18" />
         <entry key="app/src/main/res/layout/item_detail_fragment.xml" value="0.21" />
         <entry key="app/src/main/res/layout/item_list.xml" value="0.1598731884057971" />
-        <entry key="app/src/main/res/layout/item_list_fragment.xml" value="0.1598731884057971" />
+        <entry key="app/src/main/res/layout/item_list_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>

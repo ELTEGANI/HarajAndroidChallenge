@@ -22,7 +22,6 @@
             android:id="@+id/cardView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> clickListener.onClick(itemsProperties)}"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -30,6 +29,7 @@
             android:clickable="true"
             android:elevation="1dp"
             android:focusable="true"
+            android:onClick="@{() -> clickListener.onClick(itemsProperties)}"
             app:cardBackgroundColor="@color/colorGray"
             app:cardPreventCornerOverlap="false"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -50,15 +50,15 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/car_description"
                     android:adjustViewBounds="false"
+                    android:contentDescription="@string/car_description"
                     android:cropToPadding="false"
                     android:scaleType="centerCrop"
                     app:imageUrl="@{itemsProperties.thumbURL}"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/car_name_textView"
@@ -66,11 +66,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:textColor="@color/colorGreen"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:text="@{itemsProperties.title}"
                     android:singleLine="false"
+                    android:text="@{itemsProperties.title}"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
